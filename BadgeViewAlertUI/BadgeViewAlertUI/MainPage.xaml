@@ -1,0 +1,119 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BadgeViewAlertUI.MainPage"
+             xmlns:badgeView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+    <Grid BackgroundColor="White" 
+          RowDefinitions="*,*"
+          ColumnDefinitions="*,*">
+
+
+        <Grid BackgroundColor="White"
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+              Padding="5"
+              HeightRequest="60"
+              WidthRequest="400">
+            <badgeView:SfBadgeView BadgeText="10" >
+                <badgeView:SfBadgeView.BadgeSettings>
+                    <badgeView:BadgeSettings Icon="None" Type="None" Position="BottomRight" BorderWidth="2" Stroke="White" Background="Green"/>
+                </badgeView:SfBadgeView.BadgeSettings>
+                <Grid ColumnDefinitions="50,15,*">
+                    <Image Source="selvaganapathyk.jpeg" 
+                           WidthRequest="50" 
+                           HeightRequest="50"/>
+                    <Grid Grid.Column="2"
+                          RowDefinitions="*,*"
+                          ColumnDefinitions="*,Auto">
+                        <Label Text="Selva Ganapathy Kathiresan" FontSize="16" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Start"/>
+                        <Label Grid.Row="0" Grid.Column="1" TextColor="Green" FontSize="12" Text="09:09 am" VerticalTextAlignment="Start"/>
+                        <Label Grid.Row="1" Text="Good Morning :)" FontSize="14" TextColor="Gray"/>
+                    </Grid>
+                </Grid>
+            </badgeView:SfBadgeView>
+        </Grid>
+
+        <Grid Grid.Row="0"
+              Grid.Column="1"
+              BackgroundColor="White"
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+              HeightRequest="105"
+              WidthRequest="350"
+              Padding="15"
+              ColumnDefinitions="75,*">
+            <badgeView:SfBadgeView >
+                <badgeView:SfBadgeView.BadgeSettings>
+                    <badgeView:BadgeSettings x:Name="badgeSettings" Icon="Available" Position="BottomRight" Type="Success" BorderWidth="2" Stroke="White"/>
+                </badgeView:SfBadgeView.BadgeSettings>
+                <Frame CornerRadius="40">
+                    <Image Source="selvaganapathyk.jpeg" 
+                           Margin="-20"
+                           WidthRequest="75" 
+                           HeightRequest="75"/>
+                </Frame>
+            </badgeView:SfBadgeView>
+            <StackLayout Margin="10,0,0,0" Orientation="Vertical"
+                         Grid.Column="1">
+                <Label Text="Selva Ganapathy Kathiresan" FontSize="16" TextColor="Black"/>
+                <Grid Margin="0,10,0,0" ColumnDefinitions="Auto,*">
+                    <Picker x:Name="iconPicker"/>
+                    <Entry Grid.Column="1" TextColor="Gray" FontSize="12" Placeholder="Set Status Message"/>
+                </Grid>
+            </StackLayout>
+        </Grid>
+
+        <Grid Grid.Row="1"
+              Grid.Column="0"
+              BackgroundColor="White"
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+              HeightRequest="75"
+              WidthRequest="75">
+            <badgeView:SfBadgeView x:Name="animationBadgeView"  BadgeText="0">
+                <badgeView:SfBadgeView.BadgeSettings>
+                    <badgeView:BadgeSettings Icon="None" 
+                                             Animation="Scale"
+                                             Type="None" 
+                                             Offset="-10,15"
+                                             BadgeAlignment="Start"
+                                             Position="TopRight"
+                                             Background="Red"/>
+                </badgeView:SfBadgeView.BadgeSettings>
+                <Image Source="facebook.png" 
+                   
+                           WidthRequest="75" 
+                           HeightRequest="75"/>
+            </badgeView:SfBadgeView>
+        </Grid>
+
+
+
+        <Grid Grid.Row="1"
+              Grid.Column="1"
+              BackgroundColor="White"
+              VerticalOptions="Center"
+              HorizontalOptions="Center"
+              Padding="5"
+              HeightRequest="60"
+              WidthRequest="200">
+            <badgeView:SfBadgeView BadgeText="Best Seller" >
+                <badgeView:SfBadgeView.BadgeSettings>
+                    <badgeView:BadgeSettings Icon="None" Type="None" Position="TopRight"  Background="Gold" TextColor="Black"/>
+                </badgeView:SfBadgeView.BadgeSettings>
+                <Grid ColumnDefinitions="50,15,*">
+                    <Image Source="apple.jpg" 
+                           WidthRequest="50" 
+                           HeightRequest="50"/>
+                    <Grid Grid.Column="2"
+                          RowDefinitions="*,*"
+                          ColumnDefinitions="*,Auto">
+                        <Label Text="Apple" FontSize="16" TextColor="Black" FontAttributes="Bold" VerticalTextAlignment="Start"/>
+                        <Label Grid.Row="1" Text="$ 0.99 / KG" FontSize="14" TextColor="Gray"/>
+                    </Grid>
+                </Grid>
+            </badgeView:SfBadgeView>
+        </Grid>
+    </Grid>
+</ContentPage>
