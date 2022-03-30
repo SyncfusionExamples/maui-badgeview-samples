@@ -1,0 +1,14 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BadgeCustomizationSample.MainPage"
+             xmlns:badgeView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+    <badgeView:SfBadgeView HorizontalOptions="Center" VerticalOptions="Center" >
+        <badgeView:SfBadgeView.Content>
+            <Image Source="badge_image.png" HeightRequest="70" WidthRequest="60"/>
+        </badgeView:SfBadgeView.Content>
+        <badgeView:SfBadgeView.BadgeSettings>
+            <badgeView:BadgeSettings Type="Success" Offset="-8,-12" Position="BottomRight" Icon="Available" />
+        </badgeView:SfBadgeView.BadgeSettings>
+    </badgeView:SfBadgeView>
+</ContentPage>
