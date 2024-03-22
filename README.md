@@ -1,7 +1,7 @@
 # maui-badgeview-samples
 Contains the samples for SfBadgeView in .NET MAUI Platform
 
-# Getting Started with the .NET MAUI BadgeView Control
+## Getting Started with the .NET MAUI BadgeView Control
 
 Badges are used to notify users of new or unread messages, notifications, or the status of something.
 
