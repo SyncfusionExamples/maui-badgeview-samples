@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BadgeViewAutoHide.MainPage"
+             xmlns:badgeView="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core">
+
+    <VerticalStackLayout VerticalOptions="Center">
+        <badgeView:SfBadgeView x:Name="badgeView"
+                               HorizontalOptions="Center" 
+                               VerticalOptions="Center" 
+                               WidthRequest="120" HeightRequest="60" >
+            <badgeView:SfBadgeView.BadgeSettings>
+                <badgeView:BadgeSettings AutoHide="True"/>
+            </badgeView:SfBadgeView.BadgeSettings>
+            <badgeView:SfBadgeView.Content>
+                <Button Text="Click me" 
+                        BackgroundColor="HotPink" 
+                        WidthRequest="100" 
+                        HeightRequest="40"
+                        Clicked="OnButtonClicked"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center" />
+            </badgeView:SfBadgeView.Content>
+        </badgeView:SfBadgeView>
+    </VerticalStackLayout>
+
+</ContentPage>
